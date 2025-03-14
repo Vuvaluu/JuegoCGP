@@ -9,7 +9,7 @@ public class JuegoOrdenarPalabras : MonoBehaviour
     public TMP_Text palabraDesordenadaText;
     public TMP_InputField inputField;
     public TMP_Text feedbackText;
-    public List<string> palabrasParaOrdenar;
+    [SerializeField] List<string> palabrasParaOrdenar;
     
     private string palabraCorrecta;
     private List<string> palabrasDesordenadas;
@@ -18,9 +18,16 @@ public class JuegoOrdenarPalabras : MonoBehaviour
     void Start()
     {
         IniciarJuego();
-        palabrasParaOrdenar.Add("parque");
-        palabrasParaOrdenar.Add("peluche");
-        palabrasParaOrdenar.Add("regalo");
+        palabrasParaOrdenar.Add("apple");
+        palabrasParaOrdenar.Add("house");
+        palabrasParaOrdenar.Add("dream");
+        palabrasParaOrdenar.Add("car");
+        palabrasParaOrdenar.Add("friend");
+        palabrasParaOrdenar.Add("music");
+        palabrasParaOrdenar.Add("sunshine");
+        palabrasParaOrdenar.Add("adventure");
+        palabrasParaOrdenar.Add("book");
+        palabrasParaOrdenar.Add("ocean");
     }
 
     void IniciarJuego()
@@ -67,7 +74,7 @@ public class JuegoOrdenarPalabras : MonoBehaviour
 
         if (respuesta.Equals(palabraCorrecta))
         {
-            feedbackText.text = "¡Correcto! Has ordenado la palabra correctamente.";
+            feedbackText.text = "¡Correcto!";
             
             // Agrega la palabra ordenada a la lista
             palabrasOrdenadas.Add(palabraCorrecta);
@@ -77,7 +84,7 @@ public class JuegoOrdenarPalabras : MonoBehaviour
         }
         else
         {
-            feedbackText.text = "Incorrecto. Inténtalo de nuevo.";
+            feedbackText.text = "Incorrecto";
         }
 
         // Limpia el campo de entrada
