@@ -16,5 +16,18 @@ public class Mainmenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
     
+    public void OpenLink(string url)
+    {
+        Application.OpenURL(url);
+    }
 }
